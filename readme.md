@@ -1,18 +1,18 @@
 #Как работать с этим сайтом?
 
-клонируем репозиторий:
+Клонируем репозиторий:
 
 `git clone https://gitlab.com/college-dinara-georg/GEM-lms/`
 
-переходим в репозиторий:
+Переходим в репозиторий:
 
 `cd .\GEM-lms\`
 
-устанавливаем dependencies:
+Устанавливаем dependencies:
 
 `npm install`
 
-запускаем сайт:
+Запускаем сайт:
 
 `npm run dev`
 
