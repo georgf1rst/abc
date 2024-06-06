@@ -4,7 +4,6 @@ export default function Home() {
     <>
     <div className="flex justify-center align-center">
       This is a protected page
-      Check
     </div>
     </>
   );
