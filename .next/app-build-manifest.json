@@ -1,5 +1,11 @@
 {
   "pages": {
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
     "/(dashboard)/(routes)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -10,16 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/layout.js"
     ],
-    "/layout": [
+    "/(dashboard)/(routes)/teacher/courses/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/app/(dashboard)/(routes)/teacher/courses/page.js"
     ],
     "/(dashboard)/(routes)/search/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/(routes)/search/page.js"
+    ],
+    "/(dashboard)/(routes)/teacher/analytics/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/(routes)/teacher/analytics/page.js"
     ],
     "/(auth)/(routes)/sign-in/[[...sign-in]]/page": [
       "static/chunks/webpack.js",
@@ -31,15 +41,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(auth)/(routes)/layout.js"
     ],
-    "/(dashboard)/(routes)/teacher/courses/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/(routes)/teacher/courses/page.js"
-    ],
-    "/(dashboard)/(routes)/teacher/analytics/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/(routes)/teacher/analytics/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
