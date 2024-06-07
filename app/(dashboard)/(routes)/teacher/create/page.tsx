@@ -5,6 +5,8 @@ import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import toast from "react-hot-toast";
 
 import {
   Form,
@@ -17,9 +19,6 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { title } from "process";
-import Link from "next/link";
-import toast from "react-hot-toast";
 
 const formSchema = z.object({
   title: z.string().min(1, {
@@ -40,9 +39,9 @@ const CreatePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-        const response = await axios.post("/api/course", values);
-        router.push(`/teacjer/courses/${response.data.id}}`)
-        
+        const response = await axios.post("/api/courses", values);
+        router.push(`/teacher/courses/${response.data.id}`)
+        toast.success("Course created successfully");
     } catch {
         toast.error("Something went wrong");
     };
