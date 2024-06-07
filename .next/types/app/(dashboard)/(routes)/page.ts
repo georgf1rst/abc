@@ -1,4 +1,4 @@
-// File: D:\GEM-lms\app\(dashboard)\(routes)\page.tsx
+// File: D:\CollegeProjects\GEM-lms\app\(dashboard)\(routes)\page.tsx
 import * as entry from '../../../../../app/(dashboard)/(routes)/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
