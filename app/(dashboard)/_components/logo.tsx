@@ -4,10 +4,10 @@ import Image from "next/image";
 export const Logo = () => {
     return(
         <Image className="hidden md:flex"
-            height={160}
-            width={170}
+            height={120}
+            width={160}
             alt="logo"
-            src="/logoo.png"
+            src="/logo.svg"
         />
     )
 }
