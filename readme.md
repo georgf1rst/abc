@@ -35,7 +35,7 @@
 ### Добавь изменения в ветку
 
 ######
-        git add.
+        git add .
 
 ######
         git commit -m "description of changes"
