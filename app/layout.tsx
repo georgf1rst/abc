@@ -4,6 +4,8 @@ import { Oswald } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { ToastProvider } from "@/components/providers/toaster-provider";
+import "@uploadthing/react/styles.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 const oswald = Oswald({ subsets: ["latin"] });
