@@ -92,9 +92,10 @@ const CourseIdPage = async ({
                                 Course chapters
                             </h2>
                         </div>
-                        <div>
-                            TODO: Chapters
-                        </div>
+                        <DescriptionForm
+                            initialData={course}
+                            courseId={course.id}
+                        />
                     </div>
                     <div>
                         <div className="flex items-center gap-x-2">
