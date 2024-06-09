@@ -35,6 +35,17 @@ const CourseIdPage = async ({
 
     });
 
+    
+
+
+    const categories = await db.category.findMany({
+        orderBy: {
+            name: "asc"
+        },
+    });
+
+
+
     if (!course) {
         return redirect("/");
     }
@@ -83,6 +94,14 @@ const CourseIdPage = async ({
                     <ImageForm
                         initialData={course}
                         courseId={course.id}
+                    />
+                    <CategoryForm
+                        initialData={course}
+                        courseId={course.id}
+                        options={categories.map((category) => ({
+                            label: category.name,
+                            value: category.id
+                        }))}
                     />
                 </div>
                 <div className="space-y-6">
