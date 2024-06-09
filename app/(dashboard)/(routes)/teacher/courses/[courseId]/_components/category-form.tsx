@@ -21,6 +21,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 import { Course } from "@prisma/client";
+import { Combobox } from "@/components/ui/combobox";
 
 interface CategoryFormProps {
   initialData: Course
@@ -100,11 +101,10 @@ export const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Textarea 
-                      disabled={isSubmitting}
-                      placeholder="e.g. 'This course is about...'"
+                    {/* <Combobox
                       {...field}
-                    />
+                      options={...options}
+                    /> */}
                   </FormControl>
                   <FormMessage />
                 </FormItem>
