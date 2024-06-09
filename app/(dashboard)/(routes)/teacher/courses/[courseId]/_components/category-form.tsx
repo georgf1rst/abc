@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 import { Course } from "@prisma/client";
 import { Combobox } from "@/components/ui/combobox";
+import { ComboboxDemo } from "@/components/ui/combobox-ex";
 
 interface CategoryFormProps {
   initialData: Course
@@ -101,10 +102,10 @@ export const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    {/* <Combobox
+                    <Combobox
                       {...field}
-                      options={...options}
-                    /> */}
+                      options={options}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

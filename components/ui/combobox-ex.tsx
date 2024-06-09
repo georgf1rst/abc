@@ -19,17 +19,18 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
+
 interface ComboboxProps {
-    options: { label: string; value: string }[];
+    frameworks: { label: string; value: string }[];
     value?: string;
     onChange: (value: string) => void;
-};
+}
 
-export function Combobox({
-    options,
+export function ComboboxDemo({
+    frameworks,
     value,
     onChange,
-}: ComboboxProps) {
+} : ComboboxProps) {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -42,32 +43,33 @@ export function Combobox({
           className="w-full justify-between"
         >
           {value
-            ? options.find((option) => option.value === value)?.label
-            : "Select option..."}
+            ? frameworks.find((framework) => framework.value === value)?.label
+            : "Select framework..."}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
         <Command>
-          <CommandInput placeholder="Search option..." />
+          <CommandInput placeholder="Search framework..." />
           <CommandList>
-            <CommandEmpty>No option found.</CommandEmpty>
+            <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
-              {options.map((option) => (
+              {frameworks.map((framework) => (
                 <CommandItem
-                  key={option.value}
+                  key={framework.value}
+                  value={framework.value}
                   onSelect={() => {
-                    onChange(option.value === value ? "" : option.value)
+                    onChange(framework.value === value ? "" : framework.value)
                     setOpen(false)
                   }}
                 >
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      value === option.value ? "opacity-100" : "opacity-0"
+                      value === framework.value ? "opacity-100" : "opacity-0"
                     )}
                   />
-                  {option.label}
+                  {framework.label}
                 </CommandItem>
               ))}
             </CommandGroup>
