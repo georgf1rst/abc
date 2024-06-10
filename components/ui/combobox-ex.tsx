@@ -19,7 +19,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-
 interface ComboboxProps {
     frameworks: { label: string; value: string }[];
     value?: string;
@@ -57,7 +56,6 @@ export function ComboboxDemo({
               {frameworks.map((framework) => (
                 <CommandItem
                   key={framework.value}
-                  value={framework.value}
                   onSelect={() => {
                     onChange(framework.value === value ? "" : framework.value)
                     setOpen(false)
