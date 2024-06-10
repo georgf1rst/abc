@@ -7,7 +7,7 @@ import { IconType } from "react-icons";
 interface CategoryItemProps {
     label: string;
     value?: string;
-    icon?: IconType
+    icon?: IconType;
 };
 
 export const CategoryItem = ({
