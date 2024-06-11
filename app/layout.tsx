@@ -5,7 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { ToastProvider } from "@/components/providers/toaster-provider";
 import "@uploadthing/react/styles.css";
-
+import { ConfettiProvider } from "@/components/providers/confetti-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const oswald = Oswald({ subsets: ["latin"] });
@@ -24,6 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className="{inter.className} h-screen">
+          <ConfettiProvider />
           <ToastProvider />
           {children}
         </body>
