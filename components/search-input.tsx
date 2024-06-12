@@ -7,11 +7,6 @@ import { useDebounce } from "@/hooks/use-debounce";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 
 export const SearchInput = () => {
-    const [isMounted, setIsMounted] = useState(false);
-    
-    useEffect(() => {
-        setIsMounted(true)
-    }, []);
 
     const [value, setValue] = useState("")
     const debouncedValue = useDebounce(value);
@@ -24,7 +19,7 @@ export const SearchInput = () => {
 
     useEffect(() => {
         const url = qs.stringifyUrl({
-            url:pathname,
+            url: pathname,
             query: {
                 CategoryId: currentCategoryId,
                 title: debouncedValue,

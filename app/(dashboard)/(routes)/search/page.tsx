@@ -35,7 +35,7 @@ const SearchPage = async ({
 
     return ( 
         <>
-            <div className="block px-6 pt-6 md:hidden md:mb-0">
+            <div className="px-6 pt-6 md:hidden md:mb-0">
                 <SearchInput/>
             </div>
             <div className="p-6 space-y-4">
