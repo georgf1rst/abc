@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { Attachment, Chapter } from "@prisma/client";
+import { Attachment, Chapter, Purchase } from "@prisma/client";
 
 interface GetChapterProps {
     userId: string;
@@ -17,7 +17,7 @@ export const getChapter = async ({
             where: {
                 userId_courseId: {
                     userId,
-                    courseId: courseId,
+                    courseId
                 }
             }
         });
