@@ -1,4 +1,5 @@
 import { getChapter } from "@/actions/get-chapter";
+import { Banner } from "@/components/banner";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
@@ -45,6 +46,8 @@ const ChapterIdPage = async ({
                 <Banner
                     variant="success"
                     label="You already completed this chapter."
+                />
+            )}
         </div>
      );
 }
