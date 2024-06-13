@@ -37,8 +37,8 @@ export const getDashboardCourses = async (userId: string): Promise<DashboardCour
         CourseWithProgressWithCategory[];
 
         for (let course of courses) {
-            const progerss = await getProgress(userId, course.id);
-            course["progress"] = progerss;
+            const progress = await getProgress(userId, course.id);
+            course["progress"] = progress;
         
         }
 
