@@ -41,6 +41,7 @@ export async function POST(
 
         const line_items: Stripe.Checkout.SessionCreateParams.LineItem[] = [
             {
+
                 quantity: 1,
                 price_data: {
                     currency: "USD",
@@ -75,7 +76,9 @@ export async function POST(
             });
         }
 
+
         const session = await stripe.checkout.sessions.create({
+            
             customer: stripeCustomer.stripeCustomerId,
             line_items,
             mode: 'payment',
