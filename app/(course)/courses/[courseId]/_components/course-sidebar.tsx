@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs/server";
-import { Course } from "@prisma/client"
+import { Chapter, Course, UserProgress } from "@prisma/client"
 import { redirect } from "next/navigation";
 import { CourseSidebarItem } from "./course-sidebar-item";
 
