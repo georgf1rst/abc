@@ -30,8 +30,7 @@ export const VideoPlayer = ({
     completeOnEnd,
     title,
 }: VideoPlayerProps) => {
-    
-    const[isReady, setIsReady] = useState(false);
+    const [isReady, setIsReady] = useState(false);
     const router = useRouter();
     const confetti = useConfettiStore();
 
@@ -49,14 +48,17 @@ export const VideoPlayer = ({
                 toast.success("Progress updated");
                 router.refresh();
 
-                if (nextChapterId) {
+                if (nextChapterId){
                     router.push(`/courses/${courseId}/chapters/${nextChapterId}`)
                 }
             }
         } catch {
             toast.error("Something went wrong");
+        } finally {
+
         }
     }
+    
     return(
         <div className="relative aspect-video">
             {!isReady && !isLocked && (
