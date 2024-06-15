@@ -1,9 +1,9 @@
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 
-interface CourseProgressProps{
+interface CourseProgressProps {
     value: number;
-    variant?: "default" | "success",
+    variant?: "default" | "success";
     size?: "default" | "sm";
 };
 
@@ -14,19 +14,17 @@ const colorByVariant = {
 
 const sizeByVariant = {
     default: "text-sm",
-    sm: "text-xs",
+    sm: "text-xs"
 }
 
 export const CourseProgress = ({
     value,
     variant,
-    size,
+    size
 }: CourseProgressProps) => {
-
-
-    return (
+    return(
         <div>
-            <Progress
+            <Progress 
                 className="h-2"
                 value={value}
                 variant={variant}
